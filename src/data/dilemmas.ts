@@ -1,0 +1,137 @@
+export type Category = 'money' | 'superpowers' | 'embarrassing' | 'philosophical' | 'gross' | 'impossible';
+
+export interface Dilemma {
+  id: number;
+  optionA: string;
+  optionB: string;
+  percentA: number;
+  category: Category;
+}
+
+export const categories: { key: Category; label: string; emoji: string }[] = [
+  { key: 'money', label: 'Money', emoji: '💰' },
+  { key: 'superpowers', label: 'Superpowers', emoji: '⚡' },
+  { key: 'embarrassing', label: 'Embarrassing', emoji: '😳' },
+  { key: 'philosophical', label: 'Philosophical', emoji: '🤔' },
+  { key: 'gross', label: 'Gross', emoji: '🤢' },
+  { key: 'impossible', label: 'Impossible', emoji: '🔥' },
+];
+
+export const dilemmas: Dilemma[] = [
+  // MONEY
+  { id: 1, optionA: "Have unlimited money but no friends", optionB: "Have unlimited friends but no money", percentA: 38, category: 'money' },
+  { id: 2, optionA: "Win $10 million but age 20 years instantly", optionB: "Stay your current age but never earn more than $30K/year", percentA: 44, category: 'money' },
+  { id: 3, optionA: "Get $1 every time someone thinks about you", optionB: "Get $1000 every time you make someone laugh", percentA: 53, category: 'money' },
+  { id: 4, optionA: "Find $100 on the ground every day but can't invest it", optionB: "Get a one-time payment of $500,000", percentA: 41, category: 'money' },
+  { id: 5, optionA: "Be the richest person in a poor country", optionB: "Be middle-class in the wealthiest country", percentA: 34, category: 'money' },
+  { id: 6, optionA: "Never pay for food again", optionB: "Never pay for travel again", percentA: 47, category: 'money' },
+  { id: 7, optionA: "Earn double your salary but work 80hr weeks", optionB: "Earn half your salary but work 20hr weeks", percentA: 29, category: 'money' },
+  { id: 8, optionA: "Have a credit card with no limit but everything you buy turns pink", optionB: "Have $50K cash but can only spend it at gas stations", percentA: 72, category: 'money' },
+  { id: 9, optionA: "Get paid $1M to shave your head every month for 5 years", optionB: "Get paid $100K to never cut your hair again", percentA: 67, category: 'money' },
+  { id: 10, optionA: "Lose all your money and start over at 18", optionB: "Keep your money but restart your career at the bottom", percentA: 55, category: 'money' },
+  { id: 11, optionA: "Every dollar you spend gives $2 to your worst enemy", optionB: "You can only use cash — no digital payments ever", percentA: 37, category: 'money' },
+  { id: 12, optionA: "Get $10K/month but can never leave your hometown", optionB: "Get $3K/month but travel anywhere freely", percentA: 42, category: 'money' },
+  { id: 13, optionA: "Always buy things at 90% off but can never sell anything", optionB: "Sell anything at 10x its value but always pay full price", percentA: 51, category: 'money' },
+  { id: 14, optionA: "Win the lottery but have to give a live press conference", optionB: "Inherit millions but from someone everyone hates", percentA: 63, category: 'money' },
+  { id: 15, optionA: "Make $500K/year but forget everything every Monday", optionB: "Make $50K/year with a perfect memory", percentA: 31, category: 'money' },
+  { id: 16, optionA: "Get free rent forever but never own property", optionB: "Own a mansion but pay $10K/month in taxes", percentA: 58, category: 'money' },
+  { id: 17, optionA: "Have a vending machine that gives $20 bills but jams 50% of the time", optionB: "Have a piggy bank that doubles money but only opens once a year", percentA: 46, category: 'money' },
+
+  // SUPERPOWERS
+  { id: 18, optionA: "Fly but only 5 feet off the ground", optionB: "Be invisible but only when no one is looking", percentA: 62, category: 'superpowers' },
+  { id: 19, optionA: "Read minds but can't turn it off", optionB: "Be super strong but break everything you touch", percentA: 43, category: 'superpowers' },
+  { id: 20, optionA: "Teleport anywhere but arrive completely naked", optionB: "Time travel but only 5 minutes into the past", percentA: 52, category: 'superpowers' },
+  { id: 21, optionA: "Speak every language fluently", optionB: "Play every instrument perfectly", percentA: 61, category: 'superpowers' },
+  { id: 22, optionA: "Have super speed but can't stop quickly", optionB: "Have super strength but only in your pinky fingers", percentA: 57, category: 'superpowers' },
+  { id: 23, optionA: "Breathe underwater", optionB: "Survive in outer space", percentA: 44, category: 'superpowers' },
+  { id: 24, optionA: "Control fire but be terrified of it", optionB: "Control water but be extremely thirsty all the time", percentA: 49, category: 'superpowers' },
+  { id: 25, optionA: "See 10 seconds into the future at all times", optionB: "Rewind any conversation by 30 seconds once per day", percentA: 54, category: 'superpowers' },
+  { id: 26, optionA: "Shapeshift into any animal", optionB: "Shapeshift into any person", percentA: 39, category: 'superpowers' },
+  { id: 27, optionA: "Have a photographic memory", optionB: "Have the ability to forget anything at will", percentA: 56, category: 'superpowers' },
+  { id: 28, optionA: "Control gravity for yourself only", optionB: "Control time but only slow it by 50%", percentA: 51, category: 'superpowers' },
+  { id: 29, optionA: "Talk to animals but they're all rude", optionB: "Talk to plants but they're incredibly boring", percentA: 73, category: 'superpowers' },
+  { id: 30, optionA: "Have X-ray vision but only through food", optionB: "Have night vision but your eyes glow bright green", percentA: 36, category: 'superpowers' },
+  { id: 31, optionA: "Run as fast as a car", optionB: "Swim as fast as a dolphin", percentA: 58, category: 'superpowers' },
+  { id: 32, optionA: "Heal any wound in seconds but feel 10x the pain", optionB: "Never feel pain but wounds heal normally", percentA: 38, category: 'superpowers' },
+  { id: 33, optionA: "Copy anyone's skills by touching them", optionB: "Master any skill but it takes exactly 1 hour", percentA: 47, category: 'superpowers' },
+  { id: 34, optionA: "Pause time but you also freeze", optionB: "Speed up time but everyone else speeds up too", percentA: 63, category: 'superpowers' },
+
+  // EMBARRASSING
+  { id: 35, optionA: "Accidentally 'reply all' your most embarrassing thought to your entire company", optionB: "Have your browser history projected at your wedding", percentA: 56, category: 'embarrassing' },
+  { id: 36, optionA: "Loudly fart every time you stand up", optionB: "Loudly burp every time you sit down", percentA: 48, category: 'embarrassing' },
+  { id: 37, optionA: "Always have food stuck in your teeth", optionB: "Always have a booger visible in your nose", percentA: 71, category: 'embarrassing' },
+  { id: 38, optionA: "Trip and fall every time you enter a room", optionB: "Sneeze uncontrollably every time someone says your name", percentA: 45, category: 'embarrassing' },
+  { id: 39, optionA: "Your internal monologue plays on a speaker above your head", optionB: "Everything you text is posted publicly on a billboard", percentA: 41, category: 'embarrassing' },
+  { id: 40, optionA: "Walk around with toilet paper stuck to your shoe forever", optionB: "Always have your fly/zipper down", percentA: 64, category: 'embarrassing' },
+  { id: 41, optionA: "Accidentally call your boss 'mom' once a week", optionB: "Accidentally like your ex's photos once a month", percentA: 52, category: 'embarrassing' },
+  { id: 42, optionA: "Sing everything you say", optionB: "Dance everywhere you walk", percentA: 46, category: 'embarrassing' },
+  { id: 43, optionA: "Laugh uncontrollably at funerals", optionB: "Cry uncontrollably at parties", percentA: 37, category: 'embarrassing' },
+  { id: 44, optionA: "Have your Google searches narrated aloud", optionB: "Have your Spotify history shared with everyone you meet", percentA: 39, category: 'embarrassing' },
+  { id: 45, optionA: "Wave back at someone who wasn't waving at you — every single time", optionB: "Say 'you too' when the waiter says 'enjoy your meal' — every single time", percentA: 42, category: 'embarrassing' },
+  { id: 46, optionA: "Hiccup during every important conversation", optionB: "Yawn loudly every time someone tells a story", percentA: 55, category: 'embarrassing' },
+  { id: 47, optionA: "Pocket-dial your crush at the worst moment every week", optionB: "Autocorrect changes your texts to something embarrassing 30% of the time", percentA: 43, category: 'embarrassing' },
+  { id: 48, optionA: "Your most embarrassing photo becomes your permanent profile pic everywhere", optionB: "Your most embarrassing voicemail becomes your ringtone", percentA: 47, category: 'embarrassing' },
+  { id: 49, optionA: "Always accidentally spit a little when you talk", optionB: "Always accidentally snort when you laugh", percentA: 35, category: 'embarrassing' },
+  { id: 50, optionA: "Wear a name tag that shows your biggest insecurity", optionB: "Wear a hat that displays your last Google search", percentA: 52, category: 'embarrassing' },
+  { id: 51, optionA: "Have your parents read all your DMs", optionB: "Have your DMs read aloud at Thanksgiving", percentA: 58, category: 'embarrassing' },
+
+  // PHILOSOPHICAL
+  { id: 52, optionA: "Know how you die", optionB: "Know when you die", percentA: 41, category: 'philosophical' },
+  { id: 53, optionA: "Live to 200 but alone", optionB: "Live to 60 surrounded by loved ones", percentA: 23, category: 'philosophical' },
+  { id: 54, optionA: "Know the answer to every question", optionB: "Always know the right question to ask", percentA: 55, category: 'philosophical' },
+  { id: 55, optionA: "Relive the best day of your life forever", optionB: "Move forward but never have a day that good again", percentA: 38, category: 'philosophical' },
+  { id: 56, optionA: "Be remembered for something you didn't do", optionB: "Be forgotten for something amazing you did", percentA: 46, category: 'philosophical' },
+  { id: 57, optionA: "Experience true love once then lose it", optionB: "Never experience true love but always be content", percentA: 53, category: 'philosophical' },
+  { id: 58, optionA: "Know the meaning of life but can't tell anyone", optionB: "Not know but be able to inspire others to search", percentA: 42, category: 'philosophical' },
+  { id: 59, optionA: "Have all your memories but no new experiences", optionB: "Have new experiences but forget them after a week", percentA: 51, category: 'philosophical' },
+  { id: 60, optionA: "Live in a world with no lies", optionB: "Live in a world with no secrets", percentA: 47, category: 'philosophical' },
+  { id: 61, optionA: "Be the smartest person alive but deeply unhappy", optionB: "Be average intelligence but genuinely happy", percentA: 22, category: 'philosophical' },
+  { id: 62, optionA: "Know everyone's true opinion of you", optionB: "Have everyone know your true opinion of them", percentA: 57, category: 'philosophical' },
+  { id: 63, optionA: "Fix one mistake from your past", optionB: "See one glimpse of your future", percentA: 54, category: 'philosophical' },
+  { id: 64, optionA: "Be immortal but watch everyone you love die", optionB: "Live a normal lifespan with no loss", percentA: 28, category: 'philosophical' },
+  { id: 65, optionA: "Always tell the truth", optionB: "Always know when someone is lying", percentA: 33, category: 'philosophical' },
+  { id: 66, optionA: "Forget your happiest memory to erase your worst one", optionB: "Keep both forever", percentA: 36, category: 'philosophical' },
+  { id: 67, optionA: "Be famous but constantly misunderstood", optionB: "Be unknown but deeply understood by a few", percentA: 27, category: 'philosophical' },
+  { id: 68, optionA: "Live a perfect simulation of reality", optionB: "Live in imperfect real reality", percentA: 31, category: 'philosophical' },
+
+  // GROSS
+  { id: 69, optionA: "Lick the floor of a subway car", optionB: "Lick a public toilet seat that was just cleaned", percentA: 38, category: 'gross' },
+  { id: 70, optionA: "Drink a cup of someone else's sweat", optionB: "Eat a tablespoon of earwax", percentA: 56, category: 'gross' },
+  { id: 71, optionA: "Never brush your teeth again", optionB: "Never shower again", percentA: 62, category: 'gross' },
+  { id: 72, optionA: "Eat a live spider", optionB: "Have a spider live in your ear for a day", percentA: 54, category: 'gross' },
+  { id: 73, optionA: "Smell like onions permanently", optionB: "Smell like fish permanently", percentA: 68, category: 'gross' },
+  { id: 74, optionA: "Have permanent bad breath", optionB: "Have permanently sweaty hands", percentA: 41, category: 'gross' },
+  { id: 75, optionA: "Eat a sandwich found in a public trash can", optionB: "Drink a glass of pool water from a public pool", percentA: 37, category: 'gross' },
+  { id: 76, optionA: "Have to eat a raw onion like an apple every morning", optionB: "Drink a glass of pickle juice before every meal", percentA: 43, category: 'gross' },
+  { id: 77, optionA: "Only be able to use gas station bathrooms for a year", optionB: "Only be able to shower at the gym for a year", percentA: 34, category: 'gross' },
+  { id: 78, optionA: "Have your taste buds on your fingers", optionB: "Have your nostrils on the bottom of your feet", percentA: 49, category: 'gross' },
+  { id: 79, optionA: "Bite into every ice cream cone and find a hair", optionB: "Every pizza you eat has a mystery crunch", percentA: 44, category: 'gross' },
+  { id: 80, optionA: "Sneeze mayo", optionB: "Cry hot sauce", percentA: 58, category: 'gross' },
+  { id: 81, optionA: "Wear wet socks every day", optionB: "Have an itchy tag you can never remove", percentA: 38, category: 'gross' },
+  { id: 82, optionA: "Only eat food that's been blended into a smoothie", optionB: "Only eat food that's been left out overnight", percentA: 74, category: 'gross' },
+  { id: 83, optionA: "Have your tongue stuck to a frozen pole for 10 minutes", optionB: "Sit on a public bench in your underwear for an hour", percentA: 52, category: 'gross' },
+  { id: 84, optionA: "Chew gum found under a desk", optionB: "Wear shoes from a bowling alley with no socks for a day", percentA: 33, category: 'gross' },
+
+  // IMPOSSIBLE
+  { id: 85, optionA: "Fight 100 duck-sized horses", optionB: "Fight 1 horse-sized duck", percentA: 63, category: 'impossible' },
+  { id: 86, optionA: "Have legs as long as your fingers", optionB: "Have fingers as long as your legs", percentA: 71, category: 'impossible' },
+  { id: 87, optionA: "Be 3 feet tall", optionB: "Be 9 feet tall", percentA: 45, category: 'impossible' },
+  { id: 88, optionA: "Have no elbows", optionB: "Have no knees", percentA: 52, category: 'impossible' },
+  { id: 89, optionA: "Always be 10 minutes late", optionB: "Always be 2 hours early", percentA: 42, category: 'impossible' },
+  { id: 90, optionA: "Only be able to whisper", optionB: "Only be able to shout", percentA: 64, category: 'impossible' },
+  { id: 91, optionA: "Have hands for feet", optionB: "Have feet for hands", percentA: 57, category: 'impossible' },
+  { id: 92, optionA: "Never use the internet again", optionB: "Never eat your favorite food again", percentA: 33, category: 'impossible' },
+  { id: 93, optionA: "Always have to hop everywhere", optionB: "Always have to walk backwards", percentA: 48, category: 'impossible' },
+  { id: 94, optionA: "Have a rewind button for your life but no pause", optionB: "Have a pause button but no rewind", percentA: 46, category: 'impossible' },
+  { id: 95, optionA: "Only eat one meal a day but it's gourmet", optionB: "Eat unlimited but it's all plain oatmeal", percentA: 68, category: 'impossible' },
+  { id: 96, optionA: "Live without music", optionB: "Live without movies/TV", percentA: 37, category: 'impossible' },
+  { id: 97, optionA: "Be able to talk to animals but they gossip about you", optionB: "Be able to talk to babies but they're all mean", percentA: 59, category: 'impossible' },
+  { id: 98, optionA: "Your life has a laugh track", optionB: "Your life has dramatic background music", percentA: 41, category: 'impossible' },
+  { id: 99, optionA: "Everything you draw becomes real but you can't draw", optionB: "You can draw perfectly but nothing becomes real", percentA: 66, category: 'impossible' },
+  { id: 100, optionA: "Only communicate through memes", optionB: "Only communicate through interpretive dance", percentA: 54, category: 'impossible' },
+  { id: 101, optionA: "Have a personal narrator that never shuts up", optionB: "Have a personal soundtrack but it's always slightly off", percentA: 47, category: 'impossible' },
+  { id: 102, optionA: "Everything you sit on is slightly wet", optionB: "Everything you touch is slightly sticky", percentA: 52, category: 'impossible' },
+  { id: 103, optionA: "Only sleep 1 hour but always be tired", optionB: "Sleep 16 hours but always feel refreshed when awake", percentA: 34, category: 'impossible' },
+  { id: 104, optionA: "Have Wifi wherever you go but it's always slow", optionB: "Have blazing fast Wifi but only at home", percentA: 42, category: 'impossible' },
+  { id: 105, optionA: "Live in a world where it's always Monday", optionB: "Live in a world where it's always Sunday night", percentA: 61, category: 'impossible' },
+];
